@@ -466,6 +466,9 @@ namespace ProductAPI.Controllers
 ```
 
 ### 🔸 Program.cs
+#### Program.cs และ DI Container
+
+https://github.com/nuchit2019/Training_ProductAPI/blob/main/Program.cs.md
 
 ```csharp
 using ProductAPI.Application.Interfaces;
