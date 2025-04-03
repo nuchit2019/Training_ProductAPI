@@ -8,7 +8,7 @@
 - **D** = **Delete** → ลบข้อมูล (เช่น ลบสินค้าที่เลิกขาย)
  
 #
-# 1 API Endpoints
+# 1. API Endpoints
 รายการ **API Endpoints** ที่ได้จาก Controller `ProductController` ซึ่งรองรับ **CRUD** และ **Enquiry** (ค้นหา) สำหรับข้อมูลสินค้า:
 
 #
@@ -30,7 +30,7 @@
 
 #
 
-## ✅ 1. `GET /api/products`
+## ✅ 1.1 `GET /api/products`
 
 ### 📌 Description: ดึงสินค้าทั้งหมด
 
@@ -58,7 +58,7 @@ GET /api/products
 ```
 #
 
-## ✅ 2. `GET /api/product/{id}`
+## ✅ 1.2. `GET /api/product/{id}`
 
 ### 📌 Description: ดึงสินค้ารายตัวตาม ID
 
@@ -89,7 +89,7 @@ GET /api/product/101
 
 #
 
-## ✅ 3. `POST /api/product`
+## ✅ 1.3. `POST /api/product`
 
 ### 📌 Description: เพิ่มสินค้าใหม่
 
@@ -120,7 +120,7 @@ Content-Type: application/json
 
 #
 
-## ✅ 4. `PUT /api/product`
+## ✅ 1.4. `PUT /api/product`
 
 ### 📌 Description: แก้ไขข้อมูลสินค้า
 
@@ -149,7 +149,7 @@ Content-Type: application/json
 
 #
 
-## ✅ 5. `DELETE /api/product/{id}`
+## ✅ 1.5. `DELETE /api/product/{id}`
 
 ### 📌 Description: ลบสินค้า
 
@@ -167,8 +167,8 @@ DELETE /api/product/103
 
 #
 #
-
-## ✅ 1. สร้าง Solution & Project (VS2022)
+# 2. ขั้นตอน สร้าง Project
+## ✅ 2.1 สร้าง Solution & Project (VS2022)
 
 ### 🧱 โครงสร้าง Solution (Clean Architecture)
 
@@ -193,14 +193,14 @@ https://github.com/nuchit2019/Training_ProductAPI/blob/main/What_is_Dapper.md
 https://github.com/nuchit2019/Clean-Architecture
  
 
-## ✅ 2. สร้าง Project ด้วย Visual Studio 2022
+## ✅ 2.2 สร้าง Project ด้วย Visual Studio 2022
 
-1. เปิด Visual Studio 2022
-2. File → New → Project → เลือก **ASP.NET Core Web API**
+2.2.1. เปิด Visual Studio 2022
+2.2.2. File → New → Project → เลือก **ASP.NET Core Web API**
    - Project Name: `ProductAPI.API`
    - Framework: `.NET 8`
    - Uncheck: "Use controllers" → (จะใช้ Minimal API หรือ Clean Architecture Style)
-3. เพิ่ม Class Library (.NET 8) ทั้งหมด:
+2.2.3. เพิ่ม Class Library (.NET 8) ทั้งหมด:
    - `ProductAPI.Application`
    - `ProductAPI.Domain`
    - `ProductAPI.Infrastructure`
@@ -208,7 +208,7 @@ https://github.com/nuchit2019/Clean-Architecture
 
 #
 
-## ✅ 3. ติดตั้ง NuGet Packages
+## ✅ 2.3. ติดตั้ง NuGet Packages
 
 ### ✅ ติดตั้งใน Project `Infrastructure`
 
@@ -225,7 +225,7 @@ dotnet add ProductAPI.API package Microsoft.Extensions.DependencyInjection.Abstr
 
 #
 
-## ✅ 4. เริ่มเขียน Code ตาม Layer
+## ✅ 2.4. เริ่มเขียน Code ตาม Layer
 
 #
 
@@ -439,7 +439,7 @@ app.Run();
 
 #
 
-## ✅ 5. ตัวอย่าง Table `PRODUCTS` (Oracle)
+## ✅ 2.5.  Table `PRODUCTS` (Oracle)
 
 ```sql
 CREATE TABLE PRODUCTS (
