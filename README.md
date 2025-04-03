@@ -17,12 +17,13 @@ ProductAPI
     └── ProductAPI.Tests           # Unit Test
 ```
 #
-Dapper คืออะไร?
+### Project Structure:
+https://github.com/nuchit2019/Training_ProductAPI/blob/main/ProjectStructure.md
 
+### Dapper คืออะไร?
 https://github.com/nuchit2019/Training_ProductAPI/blob/main/What_is_Dapper.md
 #
-Clean Architecture คืออะไร?
-
+### Clean Architecture คืออะไร?
 https://github.com/nuchit2019/Clean-Architecture
 #
 
