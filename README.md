@@ -2,6 +2,165 @@
 
 ---
 
+รายการ **API Endpoints** ที่ได้จาก Controller `ProductController` ซึ่งรองรับ **CRUD** และ **Enquiry** (ค้นหา) สำหรับข้อมูลสินค้า:
+
+---
+
+## ✅ Product API Endpoints
+
+| Method | URL                     | Description                 | Request Body     | Response              |
+|--------|-------------------------|-----------------------------|------------------|------------------------|
+| GET    | `/api/product`          | ดึงสินค้าทั้งหมด (Enquiry) | -                | `List<ProductDto>`    |
+| GET    | `/api/product/{id}`     | ดึงสินค้าตาม ID            | -                | `ProductDto` หรือ 404 |
+| POST   | `/api/product`          | เพิ่มสินค้าใหม่ (Create)    | `ProductDto`     | 200 OK                |
+| PUT    | `/api/product`          | แก้ไขสินค้า (Update)        | `ProductDto`     | 200 OK                |
+| DELETE | `/api/product/{id}`     | ลบสินค้าตาม ID (Delete)     | -                | 200 OK                |
+
+---
+
+## ✅ ตัวอย่าง Request/Response
+แน่นอนครับ! ด้านล่างคือ **ตัวอย่าง Request/Response** สำหรับแต่ละ **Product API Endpoint** ที่ได้จาก `ProductController`:
+
+---
+
+## ✅ 1. `GET /api/product`
+
+### 📌 Description: ดึงสินค้าทั้งหมด
+
+**Request:**  
+```
+GET /api/product
+```
+
+**Response:**
+```json
+[
+  {
+    "id": 101,
+    "name": "Laptop Lenovo",
+    "price": 25000.00,
+    "category": "Electronics"
+  },
+  {
+    "id": 102,
+    "name": "iPhone 15",
+    "price": 39900.00,
+    "category": "Smartphone"
+  }
+]
+```
+
+---
+
+## ✅ 2. `GET /api/product/{id}`
+
+### 📌 Description: ดึงสินค้ารายตัวตาม ID
+
+**Request:**  
+```
+GET /api/product/101
+```
+
+**Response (200 OK):**
+```json
+{
+  "id": 101,
+  "name": "Laptop Lenovo",
+  "price": 25000.00,
+  "category": "Electronics"
+}
+```
+
+**Response (404 Not Found):**
+```json
+{
+  "title": "Not Found",
+  "status": 404,
+  "detail": "Not Found"
+}
+```
+
+---
+
+## ✅ 3. `POST /api/product`
+
+### 📌 Description: เพิ่มสินค้าใหม่
+
+**Request:**  
+```
+POST /api/product
+Content-Type: application/json
+```
+
+**Body:**
+```json
+{
+  "id": 103,
+  "name": "Samsung TV",
+  "price": 18990.00,
+  "category": "Electronics"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "result": "success"
+}
+```
+
+> **หมายเหตุ:** หากคุณต้องการส่งคืน `201 Created` พร้อม location ของ resource ใหม่ สามารถปรับ Controller เพิ่ม `CreatedAtAction()` ได้ครับ
+
+---
+
+## ✅ 4. `PUT /api/product`
+
+### 📌 Description: แก้ไขข้อมูลสินค้า
+
+**Request:**  
+```
+PUT /api/product
+Content-Type: application/json
+```
+
+**Body:**
+```json
+{
+  "id": 103,
+  "name": "Samsung TV 55-inch",
+  "price": 19990.00,
+  "category": "Electronics"
+}
+```
+
+**Response (200 OK):**
+```json
+{
+  "result": "success"
+}
+```
+
+---
+
+## ✅ 5. `DELETE /api/product/{id}`
+
+### 📌 Description: ลบสินค้า
+
+**Request:**  
+```
+DELETE /api/product/103
+```
+
+**Response (200 OK):**
+```json
+{
+  "result": "success"
+}
+```
+
+#
+
+
 ## ✅ 1. สร้าง Solution & Project (VS2022)
 
 ### 🧱 โครงสร้าง Solution (Clean Architecture)
