@@ -1,10 +1,10 @@
 ตัวอย่างระบบ **จัดการข้อมูลสินค้า (Product Management)** ด้วย **C# WebAPI (.NET 8)**, เชื่อมต่อ Oracle ผ่าน **Dapper**, และออกแบบตามแนวทาง **Clean Architecture** โดยใช้ **Visual Studio 2022**
 
----
+#
 
 รายการ **API Endpoints** ที่ได้จาก Controller `ProductController` ซึ่งรองรับ **CRUD** และ **Enquiry** (ค้นหา) สำหรับข้อมูลสินค้า:
 
----
+#
 
 ## ✅ Product API Endpoints
 
@@ -16,12 +16,12 @@
 | PUT    | `/api/product`          | แก้ไขสินค้า (Update)        | `ProductDto`     | 200 OK                |
 | DELETE | `/api/product/{id}`     | ลบสินค้าตาม ID (Delete)     | -                | 200 OK                |
 
----
+#
 
 ## ✅ ตัวอย่าง Request/Response
 แน่นอนครับ! ด้านล่างคือ **ตัวอย่าง Request/Response** สำหรับแต่ละ **Product API Endpoint** ที่ได้จาก `ProductController`:
 
----
+#
 
 ## ✅ 1. `GET /api/product`
 
@@ -49,8 +49,7 @@ GET /api/product
   }
 ]
 ```
-
----
+#
 
 ## ✅ 2. `GET /api/product/{id}`
 
@@ -80,7 +79,7 @@ GET /api/product/101
 }
 ```
 
----
+#
 
 ## ✅ 3. `POST /api/product`
 
@@ -111,7 +110,7 @@ Content-Type: application/json
 
 > **หมายเหตุ:** หากคุณต้องการส่งคืน `201 Created` พร้อม location ของ resource ใหม่ สามารถปรับ Controller เพิ่ม `CreatedAtAction()` ได้ครับ
 
----
+#
 
 ## ✅ 4. `PUT /api/product`
 
@@ -140,7 +139,7 @@ Content-Type: application/json
 }
 ```
 
----
+#
 
 ## ✅ 5. `DELETE /api/product/{id}`
 
@@ -159,7 +158,7 @@ DELETE /api/product/103
 ```
 
 #
-
+#
 
 ## ✅ 1. สร้าง Solution & Project (VS2022)
 
