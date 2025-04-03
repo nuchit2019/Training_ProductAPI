@@ -1,0 +1,42 @@
+﻿@ProductAPI_HostAddress = https://localhost:7236
+
+### 🔍 Get All Products
+GET {{ProductAPI_HostAddress}}/api/product
+Accept: application/json
+
+###
+
+### 🔍 Get Product By Id
+GET {{ProductAPI_HostAddress}}/api/product/1
+Accept: application/json
+
+###
+
+### ➕ Create Product
+POST {{ProductAPI_HostAddress}}/api/product
+Content-Type: application/json
+
+{
+  "name": "MacBook Pro 16",
+  "description": "Apple M3 Pro Chip",
+  "price": 89900
+}
+
+###
+
+### ✏️ Update Product
+PUT {{ProductAPI_HostAddress}}/api/product/1
+Content-Type: application/json
+
+{
+  "name": "MacBook Pro 16 (2024)",
+  "description": "Updated M3 Pro Chip",
+  "price": 92900
+}
+
+###
+
+### ❌ Delete Product
+DELETE {{ProductAPI_HostAddress}}/api/product/2
+
+###
