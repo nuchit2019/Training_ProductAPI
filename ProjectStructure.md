@@ -1,5 +1,6 @@
 Project Structure สำหรับระบบ Product API โดยแบ่งออกเป็น 5 Projects ซึ่งอยู่ใน Solution `ProductAPI` 
-![image](https://github.com/user-attachments/assets/705500bb-0179-4b3d-b81e-713ea5bb651a)
+![image](https://github.com/user-attachments/assets/acfcaf4a-7fa0-44d7-9888-8c749a48684c)
+
 
 รายละเอียดแต่ละ Project มีดังนี้:
 
