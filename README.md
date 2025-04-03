@@ -1,5 +1,12 @@
-ตัวอย่างระบบ **จัดการข้อมูลสินค้า (Product Management)** ด้วย **C# WebAPI (.NET 8)**, เชื่อมต่อ Oracle ผ่าน **Dapper**, และออกแบบตามแนวทาง **Clean Architecture** โดยใช้ **Visual Studio 2022**
+# CRUD Product 
+ตัวอย่างระบบ **จัดการข้อมูลสินค้า (CRUD Product)** ด้วย **C# WebAPI (.NET 8)**, เชื่อมต่อ Oracle ผ่าน **Dapper**, และออกแบบตามแนวทาง **Clean Architecture** โดยใช้ **Visual Studio 2022**
+# CRUD ย่อมาจาก:
 
+- **C** = **Create** → สร้างข้อมูลใหม่ (เช่น เพิ่มสินค้าใหม่)  
+- **R** = **Read** → อ่านหรือดึงข้อมูล (เช่น ดูรายละเอียดสินค้า)  
+- **U** = **Update** → แก้ไขข้อมูล (เช่น แก้ชื่อหรือราคาสินค้า)  
+- **D** = **Delete** → ลบข้อมูล (เช่น ลบสินค้าที่เลิกขาย)
+ 
 #
 
 รายการ **API Endpoints** ที่ได้จาก Controller `ProductController` ซึ่งรองรับ **CRUD** และ **Enquiry** (ค้นหา) สำหรับข้อมูลสินค้า:
