@@ -25,7 +25,7 @@
 
 #
 
-## ✅ ตัวอย่าง Request/Response
+## ✅ Model Request/Response
 **ตัวอย่าง Request/Response** สำหรับแต่ละ **Product API Endpoint** ที่ได้จาก `ProductController`:
 
 #
