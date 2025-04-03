@@ -16,9 +16,10 @@ ProductAPI
 └── tests
     └── ProductAPI.Tests           # Unit Test
 ```
+#
 Clean Architecture คืออะไร?
 https://github.com/nuchit2019/Clean-Architecture
----
+#
 
 ## ✅ 2. สร้าง Project ด้วย Visual Studio 2022
 
@@ -33,7 +34,7 @@ https://github.com/nuchit2019/Clean-Architecture
    - `ProductAPI.Infrastructure`
    - `ProductAPI.Tests` (เลือก xUnit)
 
----
+#
 
 ## ✅ 3. ติดตั้ง NuGet Packages
 
@@ -50,11 +51,11 @@ dotnet add ProductAPI.Infrastructure package Oracle.ManagedDataAccess.Core
 dotnet add ProductAPI.API package Microsoft.Extensions.DependencyInjection.Abstractions
 ```
 
----
+#
 
 ## ✅ 4. เริ่มเขียน Code ตาม Layer
 
----
+#
 
 ## 🧩 Domain Layer (ProductAPI.Domain)
 
@@ -90,7 +91,7 @@ public interface IProductRepository
 }
 ```
 
----
+#
 
 ## 🧩 Application Layer (ProductAPI.Application)
 
@@ -137,7 +138,7 @@ public class ProductService : IProductService
 }
 ```
 
----
+#
 
 ## 🧩 Infrastructure Layer (ProductAPI.Infrastructure)
 
@@ -218,7 +219,7 @@ namespace ProductAPI.Infrastructure.Repositories
 
 ```
 
----
+#
 
 ## 🧩 API Layer (ProductAPI.API)
 
@@ -264,7 +265,7 @@ app.Run();
 }
 ```
 
----
+#
 
 ## ✅ 5. ตัวอย่าง Table `PRODUCTS` (Oracle)
 
@@ -276,6 +277,7 @@ CREATE TABLE PRODUCTS (
     PRICE NUMBER(10,2),
     CREATED_AT DATE DEFAULT SYSDATE
 );
+#
 ```
 
 ---
