@@ -168,7 +168,9 @@ DELETE /api/product/103
 #
 #
 # 2. ขั้นตอน สร้าง Project
-## ✅ 2.1 สร้าง Solution & Project (VS2022)
+## ✅ 2.1 สร้าง Blank Solution Solution ด้วย VS2022
+![image](https://github.com/user-attachments/assets/7d65e87c-e8bb-40c3-8f3b-c1457d13152d)
+
 
 ### 🧱 โครงสร้าง Solution (Clean Architecture)
 
@@ -194,6 +196,8 @@ https://github.com/nuchit2019/Clean-Architecture
  
 
 ## ✅ 2.2 สร้าง Project ด้วย Visual Studio 2022
+![image](https://github.com/user-attachments/assets/82ca5156-e379-4914-a21c-6870d224e31d)
+
 
 2.2.1. เปิด Visual Studio 2022
 2.2.2. File → New → Project → เลือก **ASP.NET Core Web API**
@@ -209,6 +213,9 @@ https://github.com/nuchit2019/Clean-Architecture
 #
 
 ## ✅ 2.3. ติดตั้ง NuGet Packages
+![image](https://github.com/user-attachments/assets/aa372257-dd34-4d1c-9995-ccb9acf04cb1)
+
+![image](https://github.com/user-attachments/assets/ae67837f-ff8c-4a48-9ce3-1c9ce86836e8)
 
 ### ✅ ติดตั้งใน Project `Infrastructure`
 
@@ -394,6 +401,69 @@ namespace ProductAPI.Infrastructure.Repositories
 #
 
 ## 🧩 API Layer (ProductAPI.API)
+
+### 🔸 ProductController.cs
+```csharp
+using Microsoft.AspNetCore.Mvc;
+using ProductAPI.Application.Interfaces;
+using ProductAPI.Domain.Entities;
+
+namespace ProductAPI.Controllers
+{
+    //[Route("api/[controller]")]
+    [ApiController]
+    public class ProductController : ControllerBase
+    {
+        private readonly IProductService _service;
+
+        public ProductController(IProductService service)
+        {
+            _service = service;
+        }
+
+        [HttpGet("api/products")]
+        public async Task<IActionResult> GetAll()
+        {
+            var products = await _service.GetAllAsync();
+            return Ok(products);
+        }
+
+        
+        [HttpGet("api/product/{id:int}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var product = await _service.GetByIdAsync(id);
+            return product is not null ? Ok(product) : NotFound();
+        }
+
+       
+        [HttpPost("api/product")]
+        public async Task<IActionResult> Create(Product product)
+        {
+            var id = await _service.AddAsync(product);
+            return CreatedAtAction(nameof(GetById), new { id }, product);
+        }
+
+       
+        [HttpPut("api/product")]
+        public async Task<IActionResult> Update(int id, Product product)
+        {
+            product.Id = id;
+            var updated = await _service.UpdateAsync(product);
+            return updated ? NoContent() : NotFound();
+        }
+
+       
+        [HttpDelete("api/product/{id:int}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var deleted = await _service.DeleteAsync(id);
+            return deleted ? NoContent() : NotFound();
+        }
+    }
+}
+
+```
 
 ### 🔸 Program.cs
 
