@@ -17,7 +17,7 @@
 
 | Method | URL                     | Description                 | Request Body     | Response              |
 |--------|-------------------------|-----------------------------|------------------|------------------------|
-| GET    | `/api/product`          | ดึงสินค้าทั้งหมด (Enquiry) | -                | `List<ProductDto>`    |
+| GET    | `/api/products`          | ดึงสินค้าทั้งหมด (Enquiry) | -                | `List<ProductDto>`    |
 | GET    | `/api/product/{id}`     | ดึงสินค้าตาม ID            | -                | `ProductDto` หรือ 404 |
 | POST   | `/api/product`          | เพิ่มสินค้าใหม่ (Create)    | `ProductDto`     | 200 OK                |
 | PUT    | `/api/product`          | แก้ไขสินค้า (Update)        | `ProductDto`     | 200 OK                |
@@ -30,13 +30,13 @@
 
 #
 
-## ✅ 1. `GET /api/product`
+## ✅ 1. `GET /api/products`
 
 ### 📌 Description: ดึงสินค้าทั้งหมด
 
 **Request:**  
 ```
-GET /api/product
+GET /api/products
 ```
 
 **Response:**
