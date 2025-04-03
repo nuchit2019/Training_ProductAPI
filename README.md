@@ -48,6 +48,8 @@
 | 2022 | .NET 7 | Version ปกติ |
 | 2023 | .NET 8 (LTS) | ล่าสุด และเป็นเวอร์ชันที่เสถียรที่สุดในตอนนี้ |
 
+Modern.NET
+https://github.com/nuchit2019/Training_ProductAPI/blob/main/Modern%20.NET.md
 #
  
 #
