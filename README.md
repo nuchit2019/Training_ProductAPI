@@ -8,7 +8,7 @@
 - **D** = **Delete** → ลบข้อมูล (เช่น ลบสินค้าที่เลิกขาย)
  
 #
-# API Endpoints
+# 1 API Endpoints
 รายการ **API Endpoints** ที่ได้จาก Controller `ProductController` ซึ่งรองรับ **CRUD** และ **Enquiry** (ค้นหา) สำหรับข้อมูลสินค้า:
 
 #
