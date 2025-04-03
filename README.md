@@ -26,7 +26,7 @@
 #
 
 ## ✅ ตัวอย่าง Request/Response
-แน่นอนครับ! ด้านล่างคือ **ตัวอย่าง Request/Response** สำหรับแต่ละ **Product API Endpoint** ที่ได้จาก `ProductController`:
+**ตัวอย่าง Request/Response** สำหรับแต่ละ **Product API Endpoint** ที่ได้จาก `ProductController`:
 
 #
 
