@@ -80,9 +80,10 @@ GET /api/product/101
 **Response (404 Not Found):**
 ```json
 {
+  "type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
   "title": "Not Found",
   "status": 404,
-  "detail": "Not Found"
+  "traceId": "00-ba56f638cec2dcfd65f18585bf20da39-21369e5d800f1552-00"
 }
 ```
 
