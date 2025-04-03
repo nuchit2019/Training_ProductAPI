@@ -16,7 +16,8 @@ ProductAPI
 └── tests
     └── ProductAPI.Tests           # Unit Test
 ```
-
+Clean Architecture คืออะไร?
+https://github.com/nuchit2019/Clean-Architecture
 ---
 
 ## ✅ 2. สร้าง Project ด้วย Visual Studio 2022
