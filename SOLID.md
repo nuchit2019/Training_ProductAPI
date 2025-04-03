@@ -17,7 +17,7 @@
 
 | อักษร | ชื่อเต็ม | ความหมายหลัก |
 |-------|----------|----------------|
-| **S** | **Single Responsibility Principle (SRP)** | 1 class ควรมีเหตุผลเดียวที่ต้องเปลี่ยน |
+| **S** | **Single Responsibility Principle (SRP)** | 1 class ควรมีเหตุผลเดียวที่ต้องเปลี่ยน/หรือมีหน้าที่ 1 อย่าง |
 | **O** | **Open/Closed Principle (OCP)** | เปิดให้ขยาย (Extend), ปิดการแก้ไข (Modify) |
 | **L** | **Liskov Substitution Principle (LSP)** | ใช้ subclass แทน superclass แล้วต้องยังทำงานได้ถูกต้อง |
 | **I** | **Interface Segregation Principle (ISP)** | ไม่ควรบังคับให้ class ใช้ method ที่ไม่จำเป็น |
