@@ -236,7 +236,7 @@ string connectionString = builder.Configuration.GetConnectionString("OracleDb")!
 builder.Services.AddScoped<IProductRepository>(_ => new ProductRepository(connectionString));
 builder.Services.AddScoped<IProductService, ProductService>();
 
-builder.Services.AddControllers(); // <-- สำคัญ
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
