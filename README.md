@@ -260,11 +260,13 @@ ProductAPI
 #
 
 ## ✅ 2.3. ติดตั้ง NuGet Packages
+ติดตั้งผ่าน VS 2022
 ![image](https://github.com/user-attachments/assets/aa372257-dd34-4d1c-9995-ccb9acf04cb1)
 
 ![image](https://github.com/user-attachments/assets/ae67837f-ff8c-4a48-9ce3-1c9ce86836e8)
 
-### ✅ ติดตั้งใน Project `Infrastructure`
+### ✅ ติดตั้งใน Project `Infrastructure` 
+ติดตั้งผ่าน .NET CLI (Command Line Interface) 
 
 ```bash
 dotnet add ProductAPI.Infrastructure package Dapper
@@ -272,18 +274,18 @@ dotnet add ProductAPI.Infrastructure package Oracle.ManagedDataAccess.Core
 ```
 
 ### ✅ ติดตั้งใน Project `API`
-
+ติดตั้งผ่าน .NET CLI
 ```bash
 dotnet add ProductAPI.API package Microsoft.Extensions.DependencyInjection.Abstractions
 ```
 
 #
 
-## ✅ 2.4. เริ่มเขียน Code ตาม Layer
+# ✅ 2.4. เริ่มเขียน Code ตาม Layer
 
 #
 
-## 🧩 Domain Layer (ProductAPI.Domain)
+## 2.4.1 🧩 Domain Layer (ProductAPI.Domain)
 
 ### 🔸 Entities/Product.cs
 
@@ -300,7 +302,7 @@ public class Product
 }
 ```
 
-### 🔸 Interfaces/IProductRepository.cs
+###  2.4.2🔸 Interfaces/IProductRepository.cs
 
 ```csharp
 namespace ProductAPI.Domain.Interfaces;
@@ -319,7 +321,7 @@ public interface IProductRepository
 
 #
 
-## 🧩 Application Layer (ProductAPI.Application)
+##  2.4.3 🧩 Application Layer (ProductAPI.Application)
 
 ### 🔸 Interfaces/IProductService.cs
 
@@ -338,7 +340,7 @@ public interface IProductService
 }
 ```
 
-### 🔸 Services/ProductService.cs
+###  2.4.4 🔸 Services/ProductService.cs
 
 ```csharp
 using ProductAPI.Application.Interfaces;
@@ -366,7 +368,7 @@ public class ProductService : IProductService
 
 #
 
-## 🧩 Infrastructure Layer (ProductAPI.Infrastructure)
+##  2.4.5 🧩 Infrastructure Layer (ProductAPI.Infrastructure)
 
 ### 🔸 Repositories/ProductRepository.cs
 
@@ -447,7 +449,7 @@ namespace ProductAPI.Infrastructure.Repositories
 
 #
 
-## 🧩 API Layer (ProductAPI.API)
+##  2.4.6 🧩 API Layer (ProductAPI.API)
 
 ### 🔸 ProductController.cs
 ```csharp
@@ -512,7 +514,7 @@ namespace ProductAPI.Controllers
 
 ```
 
-### 🔸 Program.cs
+###  2.4.7🔸 Program.cs
 #### Program.cs และ DI Container
 
 https://github.com/nuchit2019/Training_ProductAPI/blob/main/Program.cs.md
@@ -547,7 +549,7 @@ app.Run();
 
 ```
 
-### 🔸 appsettings.json
+###  2.4.8🔸 appsettings.json
 
 ```json
 {
@@ -571,5 +573,4 @@ CREATE TABLE PRODUCTS (
 );
 #
 ```
-
----
+#
