@@ -245,12 +245,13 @@ ProductAPI
 ## ✅ 2.2 สร้าง Project ด้วย Visual Studio 2022
 ![image](https://github.com/user-attachments/assets/82ca5156-e379-4914-a21c-6870d224e31d)
 
-
 2.2.1. เปิด Visual Studio 2022
+
 2.2.2. File → New → Project → เลือก **ASP.NET Core Web API**
    - Project Name: `ProductAPI.API`
    - Framework: `.NET 8`
    - Uncheck: "Use controllers" → (จะใช้ Minimal API หรือ Clean Architecture Style)
+     
 2.2.3. เพิ่ม Class Library (.NET 8) ทั้งหมด:
    - `ProductAPI.Application`
    - `ProductAPI.Domain`
@@ -280,6 +281,7 @@ dotnet add ProductAPI.API package Microsoft.Extensions.DependencyInjection.Abstr
 ```
 
 #
+# Step Coding .......
 
 # ✅ 2.4. เริ่มเขียน Code ตาม Layer
 
