@@ -17,18 +17,20 @@
 1. **Cross-platform**  
    - ให้สามารถรันได้บน **Windows**, **Linux**, และ **macOS**  
    - ไม่เหมือน .NET Framework เดิมที่รันได้แค่บน Windows เท่านั้น
+   - ทำให้ Deploy ได้บน Docker, Kubernetes, Cloud อย่างอิสระ
 
 2. **Open Source**  
    - Microsoft เปิดซอร์สโค้ดทั้งหมดบน GitHub  
    - ให้นักพัฒนาชุมชนทั่วโลกสามารถมีส่วนร่วมได้
 
-3. **Modular และ Lightweight**  
+3. **Modular Architecture**  
    - เลือกติดตั้งเฉพาะ package ที่ต้องใช้ (ผ่าน NuGet)  
-   - ทำให้ขนาดของแอปเล็กลง และโหลดเร็วขึ้น
+   - ทำให้ขนาดของแอปเล็กลง และโหลดเร็วขึ้น 
 
 4. **Performance ที่ดีขึ้น**  
    - มีการออกแบบ runtime ใหม่ให้เร็วและใช้ทรัพยากรน้อยลง  
-   - ASP.NET Core ก็เร็วกว่า ASP.NET เดิมหลายเท่า
+   - เบาและเร็วกว่า .NET Framework
+   - เหมาะสำหรับ Microservices ที่ต้องการ scale ได้ดี
 
 5. **Cloud-ready และ Container-friendly**  
    - ถูกออกแบบมาให้ทำงานบน Cloud และ Docker ได้อย่างดี  
