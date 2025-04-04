@@ -52,7 +52,8 @@ Modern.NET
 https://github.com/nuchit2019/Training_ProductAPI/blob/main/Modern%20.NET.md
 #
  
-#
+# CRUD Product Endpoints
+
 # 1. API Endpoints
 รายการ **API Endpoints** ที่ได้จาก Controller `ProductController` ซึ่งรองรับ **CRUD** และ **Enquiry** (ค้นหา) สำหรับข้อมูลสินค้า:
 
@@ -161,8 +162,7 @@ Content-Type: application/json
 }
 ```
 
-> **หมายเหตุ:** หากคุณต้องการส่งคืน `201 Created` พร้อม location ของ resource ใหม่ สามารถปรับ Controller เพิ่ม `CreatedAtAction()` ได้ครับ
-
+ 
 #
 
 ## ✅ 1.4. `PUT /api/product`
