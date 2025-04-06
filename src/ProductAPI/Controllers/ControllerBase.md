@@ -47,10 +47,10 @@ if (!ModelState.IsValid)
 | `[FromForm]`   | จาก `multipart/form-data`|
 
 #
-แน่นอนครับ! 🔥  
-นี่คือตัวอย่างที่ชัดเจนของ `[FromBody]`, `[FromQuery]`, และ `[FromRoute]` พร้อมคำอธิบายว่าแต่ละตัวดึงข้อมูลจากส่วนไหนของ HTTP Request:
 
----
+#🔥 ตัวอย่างของ `[FromBody]`, `[FromQuery]`, และ `[FromRoute]` พร้อมคำอธิบายว่าแต่ละตัวดึงข้อมูลจากส่วนไหนของ HTTP Request:
+
+#
 
 ## ✅ 3.1. `[FromBody]` — รับข้อมูลจาก **Request Body**
 > ใช้กับ HTTP POST/PUT/DELETE ที่ส่งข้อมูลแบบ JSON
@@ -75,7 +75,7 @@ Content-Type: application/json
 }
 ```
 
----
+#
 
 ## ✅ 3.2. `[FromQuery]` — รับข้อมูลจาก **Query String**
 > ใช้กับ HTTP GET ที่ส่งข้อมูลผ่าน URL query เช่น `?key=value`
@@ -94,7 +94,7 @@ public IActionResult Search([FromQuery] string keyword, [FromQuery] int page = 1
 GET /api/products/search?keyword=iphone&page=2
 ```
 
----
+#
 
 ## ✅ 3.3. `[FromRoute]` — รับข้อมูลจาก **Route Parameter**
 > ใช้กับ URL ที่มี path parameter เช่น `/products/{id}`
@@ -113,7 +113,7 @@ public IActionResult GetProductById([FromRoute] int id)
 GET /api/products/101
 ```
 
----
+#
 
 ## 🔁 รวมตัวอย่างใช้หลายแบบพร้อมกัน
 ```csharp
