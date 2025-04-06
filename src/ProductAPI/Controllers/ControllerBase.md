@@ -46,7 +46,102 @@ if (!ModelState.IsValid)
 | `[FromHeader]` | จาก HTTP header         |
 | `[FromForm]`   | จาก `multipart/form-data`|
 
+#
+แน่นอนครับ! 🔥  
+นี่คือตัวอย่างที่ชัดเจนของ `[FromBody]`, `[FromQuery]`, และ `[FromRoute]` พร้อมคำอธิบายว่าแต่ละตัวดึงข้อมูลจากส่วนไหนของ HTTP Request:
+
 ---
+
+## ✅ 3.1. `[FromBody]` — รับข้อมูลจาก **Request Body**
+> ใช้กับ HTTP POST/PUT/DELETE ที่ส่งข้อมูลแบบ JSON
+
+### 🎯 ตัวอย่าง:
+```csharp
+[HttpPost("create")]
+public IActionResult CreateProduct([FromBody] ProductDto product)
+{
+    return Ok($"Created: {product.Name} ราคา {product.Price} บาท");
+}
+```
+
+### 📦 ตัวอย่าง Request:
+```
+POST /api/products/create
+Content-Type: application/json
+
+{
+  "name": "iPhone 15",
+  "price": 45900
+}
+```
+
+---
+
+## ✅ 3.2. `[FromQuery]` — รับข้อมูลจาก **Query String**
+> ใช้กับ HTTP GET ที่ส่งข้อมูลผ่าน URL query เช่น `?key=value`
+
+### 🎯 ตัวอย่าง:
+```csharp
+[HttpGet("search")]
+public IActionResult Search([FromQuery] string keyword, [FromQuery] int page = 1)
+{
+    return Ok($"Search: {keyword}, Page: {page}");
+}
+```
+
+### 🔍 ตัวอย่าง URL:
+```
+GET /api/products/search?keyword=iphone&page=2
+```
+
+---
+
+## ✅ 3.3. `[FromRoute]` — รับข้อมูลจาก **Route Parameter**
+> ใช้กับ URL ที่มี path parameter เช่น `/products/{id}`
+
+### 🎯 ตัวอย่าง:
+```csharp
+[HttpGet("{id}")]
+public IActionResult GetProductById([FromRoute] int id)
+{
+    return Ok($"Product ID: {id}");
+}
+```
+
+### 🌐 ตัวอย่าง URL:
+```
+GET /api/products/101
+```
+
+---
+
+## 🔁 รวมตัวอย่างใช้หลายแบบพร้อมกัน
+```csharp
+[HttpPut("{id}")]
+public IActionResult UpdateProduct(
+    [FromRoute] int id,
+    [FromBody] ProductDto product,
+    [FromQuery] string updatedBy)
+{
+    return Ok($"Update Product {id} by {updatedBy}, New Name: {product.Name}");
+}
+```
+
+🧾 URL:
+```
+PUT /api/products/101?updatedBy=admin
+```
+
+🧾 Body:
+```json
+{
+  "name": "iPhone 15 Pro Max",
+  "price": 55900
+}
+```
+
+ 😄
+#
 
 #### 4. **Access HTTP Context**
 เข้าถึง `HttpContext`, `Request`, `Response`, `User` ได้ทันที เช่น:
