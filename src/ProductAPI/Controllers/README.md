@@ -9,7 +9,7 @@
 #
 
 ### 🔹 `[HttpGet]`...
-- เป็น **Attribute (คำสั่งตกแต่ง)** บอกว่า Method นี้จะตอบสนองคำขอ HTTP GET
+- เป็น **Attribute** บอกว่า Method นี้จะตอบสนองคำขอ HTTP GET
 - ใช้สำหรับดึงข้อมูลทั้งหมด เช่น `GET /api/Products`
 ```csharp
 [HttpGet]
