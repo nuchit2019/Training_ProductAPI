@@ -6,7 +6,8 @@
 - `: ControllerBase` หมายถึง **สืบทอดคุณสมบัติ (inherit)** จาก `ControllerBase` ซึ่งเป็นคลาสพื้นฐานที่ใช้สำหรับสร้าง API Controller (ไม่รวม View เหมือน `Controller`)
 - ใช้ `ControllerBase` จะมีฟีเจอร์เช่น `Ok()`, `NotFound()`, `BadRequest()` เพื่อคืนค่า HTTP Response แบบต่าง ๆ
 -   ControllerBase:
--         https://github.com/nuchit2019/Training_ProductAPI/blob/main/src/ProductAPI/Controllers/ControllerBase.md
+-         ControllerBase:
+          https://github.com/nuchit2019/Training_ProductAPI/blob/main/src/ProductAPI/Controllers/ControllerBase.md
 
 #
 
