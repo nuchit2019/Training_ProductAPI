@@ -1,5 +1,7 @@
   
-# 🔍 `ControllerBase` เป็นคลาสพื้นฐานสำหรับ API Controller ใน ASP.NET Core  
+# 🔍 `ControllerBase` 
+
+`ControllerBase` เป็นคลาสพื้นฐานสำหรับ API Controller ใน ASP.NET Core  
 โดยไม่รวม View (เหมือน `Controller` สำหรับ MVC)  
 เน้นตอบสนอง **Web API (JSON / XML)** อย่างเดียว
 
