@@ -49,20 +49,20 @@ classDiagram
 
 ```
 
-นี่คือลักษณะ **Class Diagram** ในรูปแบบ **Markdown** ที่อธิบายความสัมพันธ์และการทำงานระหว่าง `DbConnectionFactory` และ `DapperWrapperBase` พร้อมคำอธิบายเป็นภาษาไทย:
+# `DbConnectionFactory` และ `DapperWrapperBase` **Class Diagram** :
 
 ```markdown
 # Class Diagram: DbConnectionFactory และ DapperWrapperBase
 
 ## ภาพรวม
 
-ในเอกสารนี้จะอธิบายการทำงานร่วมกันระหว่าง `DbConnectionFactory` และ `DapperWrapperBase` โดยที่ `DbConnectionFactory` มีหน้าที่ในการสร้างการเชื่อมต่อฐานข้อมูล ส่วน `DapperWrapperBase` ใช้การเชื่อมต่อเหล่านั้นในการดำเนินการคำสั่ง SQL ผ่าน Dapper
+การทำงานร่วมกันระหว่าง `DbConnectionFactory` และ `DapperWrapperBase` โดยที่ `DbConnectionFactory` มีหน้าที่ในการสร้างการเชื่อมต่อฐานข้อมูล ส่วน `DapperWrapperBase` ใช้การเชื่อมต่อเหล่านั้นในการดำเนินการคำสั่ง SQL ผ่าน Dapper
 
 ### คลาสที่เกี่ยวข้อง:
 1. **DbConnectionFactory** - คลาสสำหรับสร้างการเชื่อมต่อ Oracle database
 2. **DapperWrapperBase** - คลาสแอบสแตรกที่ใช้ในการดำเนินการคำสั่ง SQL โดยใช้ Dapper และตรวจสอบให้การเชื่อมต่อพร้อมใช้งาน
 
----
+#
 
 ## Class Diagram Flow
 
@@ -158,7 +158,7 @@ classDiagram
                               +--------------------------+
 ```
 
----
+#
 
 ## สรุป
 
@@ -167,7 +167,4 @@ classDiagram
 - การแยกหน้าที่แบบนี้ช่วยให้การจัดการการเชื่อมต่อและการดำเนินการคำสั่ง SQL สามารถแยกออกจากกันและทดสอบได้ง่าย
 
 ```
-
-เอกสารนี้จะช่วยให้คุณเข้าใจภาพรวมของการทำงานร่วมกันระหว่าง `DbConnectionFactory` และ `DapperWrapperBase` ได้ชัดเจนขึ้น โดยสามารถนำไปใช้อธิบายหรือนำไปใช้พัฒนาโค้ดในอนาคตได้
-
-หากต้องการปรับปรุงหรือต้องการคำอธิบายเพิ่มเติม สามารถบอกได้ครับ!
+ 
