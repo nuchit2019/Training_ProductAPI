@@ -51,7 +51,7 @@ classDiagram
 
 # `DbConnectionFactory` และ `DapperWrapperBase` **Class Diagram** :
 
-```markdown
+ 
 # Class Diagram: DbConnectionFactory และ DapperWrapperBase
 
 ## ภาพรวม
