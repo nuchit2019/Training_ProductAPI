@@ -1,4 +1,4 @@
-# `DbConnectionFactory` และ `DapperWrapperBase` **Class Diagram** :
+# `DbConnectionFactory` **Class Diagram** :
 
 ```mermaid
 
