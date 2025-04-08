@@ -1,6 +1,6 @@
 # Reinsurances **Class Diagram** 
 
-ที่อธิบายความสัมพันธ์ระหว่าง `ReinsurancesController`, `ExportRequestService`, และ `ExportRequestRepository`
+แสดงความสัมพันธ์ระหว่าง `ReinsurancesController`, `ExportRequestService`, และ `ExportRequestRepository`
 #
 ```mermaid
 classDiagram
