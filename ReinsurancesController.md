@@ -1,6 +1,6 @@
 **Class Diagram** ที่อธิบายความสัมพันธ์ระหว่าง `ReinsurancesController`, `ExportRequestService`, และ `ExportRequestRepository` :
 
-```markdown
+```mermaid
 classDiagram
     class ReinsurancesController {
         - ILogger<ReinsurancesController> _logger
