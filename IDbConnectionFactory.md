@@ -1,3 +1,5 @@
+# `DbConnectionFactory` และ `DapperWrapperBase` **Class Diagram** :
+
 ```mermaid
 
 classDiagram
@@ -49,7 +51,7 @@ classDiagram
 
 ```
 
-# `DbConnectionFactory` และ `DapperWrapperBase` **Class Diagram** :
+
 
  
 # Class Diagram: DbConnectionFactory และ DapperWrapperBase
