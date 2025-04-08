@@ -1,39 +1,39 @@
-แน่นอนครับ! ด้านล่างคือลักษณะของ **Class Diagram** ที่อธิบายความสัมพันธ์ระหว่าง `ReinsurancesController`, `ExportRequestService`, และ `ExportRequestRepository` ในรูปแบบ Markdown ที่สามารถนำไปใช้กับเครื่องมือที่รองรับเช่น PlantUML หรือ Mermaid:
+**Class Diagram** ที่อธิบายความสัมพันธ์ระหว่าง `ReinsurancesController`, `ExportRequestService`, และ `ExportRequestRepository` :
 
 ```markdown
-@startuml
-class ReinsurancesController {
-  - ILogger<ReinsurancesController> _logger
-  - IExportRequestService _exportRequestService
-  + ReinsurancesController(IExportRequestService exportRequestService, ILogger<ReinsurancesController> logger)
-  + ExportReportByDateRange(reqByDateRange: ReqbyDateRange): Task<IActionResult>
-  + ExportReportBySingleDate(reqSingleDate: ReqSingleDate): Task<IActionResult>
-}
+classDiagram
+    class ReinsurancesController {
+        - ILogger<ReinsurancesController> _logger
+        - IExportRequestService _exportRequestService
+        + ReinsurancesController(IExportRequestService exportRequestService, ILogger<ReinsurancesController> logger)
+        + ExportReportByDateRange(reqByDateRange: ReqbyDateRange): Task<IActionResult>
+        + ExportReportBySingleDate(reqSingleDate: ReqSingleDate): Task<IActionResult>
+    }
 
-class ExportRequestService {
-  - IExportRequestRepository _repository
-  - ILogger<ExportRequestService> _logger
-  + ExportRequestService(IExportRequestRepository repository, ILogger<ExportRequestService> logger)
-  + CreateExportRequestAsync(exportRequest: ReinsExportRequest): Task<int?>
-  + GetCheckRequestDateRangeExits(StartDate: DateTime, EndDate: DateTime): Task<IEnumerable<ReinsExportRequest>>
-  + GetCheckRequestByDateExits(singleDate: DateTime): Task<IEnumerable<ReinsExportRequest>>
-}
+    class ExportRequestService {
+        - IExportRequestRepository _repository
+        - ILogger<ExportRequestService> _logger
+        + ExportRequestService(IExportRequestRepository repository, ILogger<ExportRequestService> logger)
+        + CreateExportRequestAsync(exportRequest: ReinsExportRequest): Task<int?>
+        + GetCheckRequestDateRangeExits(StartDate: DateTime, EndDate: DateTime): Task<IEnumerable<ReinsExportRequest>>
+        + GetCheckRequestByDateExits(singleDate: DateTime): Task<IEnumerable<ReinsExportRequest>>
+    }
 
-class ExportRequestRepository {
-  - IConfiguration _config
-  - IReinsuranceDapperWrapper _dapperWrapper
-  + ExportRequestRepository(IConfiguration config, IReinsuranceDapperWrapper dapperWrapper)
-  + CreateExportRequestAsync(request: ReinsExportRequest): Task<int?>
-  + GetRequestByIdAsync(requestId: int): Task<ReinsExportRequest?>
-  + UpdateRequestStatusAsync(requestId: int, status: string, fileUrl: string?): Task
-  + GetPendingRequestsAsync(): Task<IEnumerable<ReinsExportRequest>>
-  + GetCheckRequestDateRangeExits(StartDate: DateTime, EndDate: DateTime): Task<IEnumerable<ReinsExportRequest>>
-  + GetCheckRequestByDateExits(singleDate: DateTime): Task<IEnumerable<ReinsExportRequest>>
-}
+    class ExportRequestRepository {
+        - IConfiguration _config
+        - IReinsuranceDapperWrapper _dapperWrapper
+        + ExportRequestRepository(IConfiguration config, IReinsuranceDapperWrapper dapperWrapper)
+        + CreateExportRequestAsync(request: ReinsExportRequest): Task<int?>
+        + GetRequestByIdAsync(requestId: int): Task<ReinsExportRequest?>
+        + UpdateRequestStatusAsync(requestId: int, status: string, fileUrl: string?): Task
+        + GetPendingRequestsAsync(): Task<IEnumerable<ReinsExportRequest>>
+        + GetCheckRequestDateRangeExits(StartDate: DateTime, EndDate: DateTime): Task<IEnumerable<ReinsExportRequest>>
+        + GetCheckRequestByDateExits(singleDate: DateTime): Task<IEnumerable<ReinsExportRequest>>
+    }
 
-ReinsurancesController --> ExportRequestService : uses
-ExportRequestService --> ExportRequestRepository : uses
-@enduml
+    ReinsurancesController --> ExportRequestService : uses
+    ExportRequestService --> ExportRequestRepository : uses
+
 ```
 
 ### การอธิบายแต่ละคลาส
